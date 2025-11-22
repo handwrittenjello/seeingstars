@@ -7,7 +7,7 @@ const projectRoot = join(__dirname, '..');
 
 const thumbDir = join(projectRoot, 'src/assets/images/thumbs');
 const fullDir = join(projectRoot, 'src/assets/images/full');
-const jsonPath = join(projectRoot, 'src/data/gallery.json');
+const jsonPath = join(projectRoot, 'public/data/gallery.json');
 
 // Load existing gallery.json if it exists
 function loadExistingData() {
