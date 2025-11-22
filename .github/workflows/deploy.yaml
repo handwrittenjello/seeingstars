@@ -35,20 +35,20 @@ jobs:
     - name: Sync to S3
       run: |
         # Sync everything with long cache except HTML
-        aws s3 sync dist/ s3://seeingstars.space \
+        aws s3 sync dist/ s3://www.seeingstars.space \
           --delete \
           --cache-control "public,max-age=31536000,immutable" \
           --exclude "*.html" \
           --exclude "*.json"
         
         # Sync HTML with no cache
-        aws s3 sync dist/ s3://seeingstars.space \
+        aws s3 sync dist/ s3://www.seeingstars.space \
           --cache-control "public,max-age=0,must-revalidate" \
           --exclude "*" \
           --include "*.html"
         
         # Sync JSON with short cache
-        aws s3 sync dist/ s3://seeingstars.space \
+        aws s3 sync dist/ s3://www.seeingstars.space \
           --cache-control "public,max-age=300" \
           --exclude "*" \
           --include "*.json"
