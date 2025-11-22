@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse the complete astrophotography gallery featuring deep space objects, nebulae, and galaxies.">
+  <title>Gallery - Seeing Stars</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <a href="/" class="logo">SEEING STARS</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/gallery.html" class="active">Gallery</a></li>
+        <li><a href="/videos.html">Videos</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section style="padding: 4rem 0 2rem;">
+    <div class="container">
+      <div class="section-header">
+        <h1>Complete Gallery</h1>
+        <p>Click any image to view full resolution details</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Grid -->
+  <section>
+    <div class="container">
+      <div class="grid grid-3" id="gallery-grid">
+        <div class="loading">
+          <div class="spinner"></div>
+          <p>Loading gallery...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-close" onclick="closeLightbox()" title="Close (Esc)">
+      ✕
+    </div>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="">
+    </div>
+    <div class="lightbox-info" id="lightbox-info">
+      <h3 id="lightbox-title">Image Title</h3>
+      <p id="lightbox-subtitle">Details</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Seeing Stars</h3>
+          <p>Exploring the universe one photon at a time.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/videos.html">Videos</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Connect</h3>
+          <ul>
+            <li><a href="mailto:hello@seeingstars.space">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Seeing Stars. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Gallery Script -->
+  <script type="module" src="/scripts/gallery.js"></script>
+</body>
+</html>

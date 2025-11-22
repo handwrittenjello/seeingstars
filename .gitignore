@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment files
+.env
+.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# Large media files (store in S3 or use Git LFS)
+src/assets/images/originals/
+src/assets/images/full/*.jpg
+src/assets/images/full/*.png
+src/assets/videos/clips/*.mp4
+src/assets/videos/clips/*.mov
+
+# Keep thumbs and posters (under 100KB each, safe for git)
+!src/assets/images/thumbs/
+!src/assets/videos/poster/

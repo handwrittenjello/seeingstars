@@ -1,0 +1,17 @@
+{
+  "name": "seeingstars",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "optimize": "node scripts/optimize-images.js",
+    "generate": "node scripts/generate-gallery-json.js",
+    "sync": "npm run optimize && npm run generate"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.0",
+    "vite": "^5.0.0"
+  }
+}

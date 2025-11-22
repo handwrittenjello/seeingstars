@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="High-resolution astrophotography capturing the beauty of deep space objects, nebulae, and celestial wonders.">
+  <title>Seeing Stars - Astrophotography</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="/styles/main.css">
+  
+  <!-- Favicon placeholder -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <a href="/" class="logo">SEEING STARS</a>
+      <ul class="nav-links">
+        <li><a href="/" class="active">Home</a></li>
+        <li><a href="/gallery.html">Gallery</a></li>
+        <li><a href="/videos.html">Videos</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Capturing the Cosmos</h1>
+      <p>
+        High-resolution astrophotography revealing the intricate beauty of nebulae, 
+        galaxies, and celestial objects from dark sky locations.
+      </p>
+      <div class="btn-group">
+        <a href="/gallery.html" class="btn">
+          <span>View Gallery</span>
+          <span>→</span>
+        </a>
+        <a href="/videos.html" class="btn btn-secondary">
+          <span>Watch Videos</span>
+          <span>▶</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Featured Section -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured Work</h2>
+        <p>A selection of recent captures from remote dark sky sites</p>
+      </div>
+      
+      <div class="grid grid-3" id="featured-grid">
+        <!-- Cards will be populated by JavaScript -->
+        <div class="loading">
+          <div class="spinner"></div>
+          <p>Loading images...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section style="background: var(--bg-nebula);">
+    <div class="container">
+      <div class="section-header">
+        <h2>About the Process</h2>
+        <p>Astrophotography combines art, science, and patience</p>
+      </div>
+      
+      <div class="grid grid-2" style="gap: 3rem; max-width: 1000px; margin: 0 auto;">
+        <div>
+          <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">Equipment</h3>
+          <p style="color: var(--text-dim); line-height: 1.8;">
+            Each image is captured using specialized telescopes, cooled astronomy cameras, 
+            and narrowband filters to reveal details invisible to the naked eye. 
+            Long exposures ranging from minutes to hours are combined to create the final images.
+          </p>
+        </div>
+        
+        <div>
+          <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">Processing</h3>
+          <p style="color: var(--text-dim); line-height: 1.8;">
+            Raw data undergoes careful calibration, stacking, and enhancement to bring out 
+            the natural colors and structures of deep space objects while maintaining 
+            scientific accuracy and artistic vision.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Seeing Stars</h3>
+          <p>
+            Exploring the universe one photon at a time. 
+            All images captured from dark sky preserves.
+          </p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="/gallery.html">Full Gallery</a></li>
+            <li><a href="/videos.html">Video Showcase</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Connect</h3>
+          <ul>
+            <li><a href="mailto:hello@seeingstars.space">Email</a></li>
+            <li><a href="https://instagram.com/seeingstars" target="_blank" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Seeing Stars. All images and content are protected by copyright.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module">
+    // Load featured images from JSON
+    async function loadFeatured() {
+      const grid = document.getElementById('featured-grid');
+      
+      try {
+        console.log('🔍 Fetching gallery data...');
+        
+        const response = await fetch('/data/gallery.json');
+        console.log('📡 Response status:', response.status);
+        
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        
+        const data = await response.json();
+        console.log('✅ Data loaded:', data);
+        console.log('📊 Images found:', data.images?.length || 0);
+        
+        // Safety check
+        if (!data.images || data.images.length === 0) {
+          grid.innerHTML = `
+            <div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--text-dim);">
+              <p>No images found in gallery.json</p>
+              <p style="margin-top: 1rem; font-size: 0.9rem;">
+                Run: <code>npm run sync</code> to generate gallery data
+              </p>
+            </div>
+          `;
+          return;
+        }
+        
+        const featuredImages = data.images.slice(0, 3);
+        
+        grid.innerHTML = featuredImages.map(img => `
+          <div class="card" onclick="window.location.href='/gallery.html'">
+            <div class="card-image">
+              <img src="${img.thumb}" alt="${img.title}" loading="lazy" 
+                   onerror="this.src='https://via.placeholder.com/300x300/1a1a28/9296a8?text=Image+Not+Found'">
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">${img.title}</h3>
+              <p style="color: var(--text-dim); font-size: 0.95rem; margin-bottom: 0.5rem;">
+                ${img.subtitle}
+              </p>
+              <div class="card-meta">
+                ${img.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+              </div>
+            </div>
+          </div>
+        `).join('');
+        
+        console.log('✅ Featured images rendered');
+        
+      } catch (error) {
+        console.error('❌ Failed to load featured images:', error);
+        grid.innerHTML = `
+          <div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--text-dim);">
+            <p style="color: #ff6b6b;">⚠️ Failed to load gallery</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">
+              Error: ${error.message}
+            </p>
+            <p style="margin-top: 1rem; font-size: 0.85rem;">
+              Check the browser console (F12) for details
+            </p>
+          </div>
+        `;
+      }
+    }
+    
+    loadFeatured();
+  </script>
+</body>
+</html>
