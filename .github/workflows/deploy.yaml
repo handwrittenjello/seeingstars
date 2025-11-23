@@ -36,10 +36,12 @@ jobs:
 
     - name: Sync to S3
       run: |
-        # Sync everything with long cache except HTML
+        # Sync everything with long cache except HTML, JSON, and static assets
         aws s3 sync dist/ s3://www.seeingstars.space \
           --delete \
           --cache-control "public,max-age=31536000,immutable" \
+          --exclude "assets/images/*" \
+          --exclude "assets/videos/*" \
           --exclude "*.html" \
           --exclude "*.json"
         
