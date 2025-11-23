@@ -25,7 +25,10 @@ async function loadGallery() {
       <div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--text-dim);">
         <p>⚠️ Failed to load gallery data</p>
         <p style="margin-top: 1rem; font-size: 0.9rem;">
-          Make sure <code>src/data/gallery.json</code> exists and is valid JSON.
+          Error: ${error.message}
+        </p>
+        <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-dim);">
+          Expected location: /data/gallery.json
         </p>
       </div>
     `;
@@ -51,12 +54,9 @@ function renderGallery() {
       </div>
       <div class="card-content">
         <h3 class="card-title">${img.title}</h3>
-        <p style="color: var(--text-dim); font-size: 0.95rem; margin-bottom: 0.5rem;">
+        <p style="color: var(--text-dim); font-size: 0.95rem;">
           ${img.subtitle}
         </p>
-        <div class="card-meta">
-          ${img.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-        </div>
       </div>
     </div>
   `).join('');

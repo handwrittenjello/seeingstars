@@ -2,7 +2,7 @@ name: Deploy to S3 + CloudFront
 
 on:
   push:
-    branches: [master]  # Changed from 'main' to 'master'
+    branches: [master]
   workflow_dispatch:
 
 jobs:
@@ -12,6 +12,8 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
+      with:
+        lfs: true  # Add this line to fetch Git LFS files
 
     - name: Setup Node.js
       uses: actions/setup-node@v4
@@ -63,5 +65,5 @@ jobs:
       run: |
         echo "✅ Deployment complete!"
         echo "🌐 Site: https://seeingstars.space"
-        echo "📦 Bucket: s3://YOUR-BUCKET-NAME"
+        echo "📦 Bucket: s3://www.seeingstars.space"
         echo "⚡ CloudFront cache invalidated"

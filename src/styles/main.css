@@ -280,6 +280,11 @@ section {
   transform: scale(1.1);
 }
 
+/* Hide tags in gallery cards */
+.card .card-meta {
+  display: none;
+}
+
 .card-content {
   padding: var(--spacing-md);
 }
@@ -377,6 +382,7 @@ section {
 }
 
 .lightbox-info {
+  display: none; /* Hide title and caption in lightbox */
   position: absolute;
   bottom: 2rem;
   left: 50%;

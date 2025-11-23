@@ -2,15 +2,15 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   root: 'src',
-  publicDir: '../public',     
+  publicDir: '../public',  // Copy from /public to /dist
   build: {
     outDir: '../dist',
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: 'src/index.html',
-        gallery: 'src/gallery.html',
-        videos: 'src/videos.html'
+        main: './src/index.html',      // Relative to project root
+        gallery: './src/gallery.html',
+        videos: './src/videos.html'
       }
     }
   },
