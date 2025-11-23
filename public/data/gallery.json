@@ -37,14 +37,78 @@
       "date": "2025-11-22",
       "exposure": "[UPDATE: e.g., 150 x 180s Ha/OIII]",
       "equipment": "[UPDATE: Telescope + Camera]"
-    }
+    },
+    {
+  "thumb": "/assets/images/thumbs/California 2-12-2025.jpg",
+  "full": "/assets/images/full/California 2-12-2025.jpg",
+  "title": "The California Nebula",
+  "subtitle": "[ADD DESCRIPTION]",
+  "tags": ["[ADD TAGS]"],
+  "date": "[YYYY-MM-DD]",
+  "exposure": "[UPDATE: e.g., 150 x 180s Ha/OIII]",
+  "equipment": "[UPDATE: Telescope + Camera]"
+},
+{
+  "thumb": "/assets/images/thumbs/IC 434 2-8-2025.jpg",
+  "full": "/assets/images/full/IC 434 2-8-2025.jpg",
+  "title": "The Horsehead Nebula",
+  "subtitle": "[ADD DESCRIPTION]",
+  "tags": ["[ADD TAGS]"],
+  "date": "[YYYY-MM-DD]",
+  "exposure": "[UPDATE: e.g., 150 x 180s Ha/OIII]",
+  "equipment": "[UPDATE: Telescope + Camera]"
+},
+{
+  "thumb": "/assets/images/thumbs/M45 11-26-2024.jpg",
+  "full": "/assets/images/full/M45 11-26-2024.jpg",
+  "title": "The Pleiades",
+  "subtitle": "[ADD DESCRIPTION]",
+  "tags": ["[ADD TAGS]"],
+  "date": "[YYYY-MM-DD]",
+  "exposure": "[UPDATE: e.g., 150 x 180s Ha/OIII]",
+  "equipment": "[UPDATE: Telescope + Camera]"
+},
+{
+  "thumb": "/assets/images/thumbs/Saturn_8-21-2023.jpg",
+  "full": "/assets/images/full/Saturn_8-21-2023.jpg",
+  "title": "Saturn",
+  "subtitle": "[ADD DESCRIPTION]",
+  "tags": ["[ADD TAGS]"],
+  "date": "[YYYY-MM-DD]",
+  "exposure": "[UPDATE: e.g., 150 x 180s Ha/OIII]",
+  "equipment": "[UPDATE: Telescope + Camera]"
+}
   ],
   "videos": [
+      {
+      "poster": "/assets/videos/poster/veilForaxx-Crop.png",
+      "src": "/assets/videos/clips/veilForaxx-Crop.mp4",
+      "title": "The Eastern and Western Veil Nebula",
+      "description": "The remains of a supernova that has ejected matter in the constellation of Cygnus",
+      "duration": "1:00",
+      "tags": [
+        "Time-lapse",
+        "Milky Way"
+      ],
+      "date": "2025-11-15"
+    },
     {
       "poster": "/assets/videos/poster/constellations 11-15-2025.png",
       "src": "/assets/videos/clips/constellations 11-15-2025.mp4",
       "title": "Constellations 11-15-2025",
       "description": "Time-lapse of some winter constellations",
+      "duration": "1:00",
+      "tags": [
+        "Time-lapse",
+        "Milky Way"
+      ],
+      "date": "2025-11-15"
+    },
+        {
+      "poster": "/assets/videos/poster/Moon 10-8-2025.png",
+      "src": "/assets/videos/clips/Moon 10-8-2025.mp4",
+      "title": "Moon 11-15-2025",
+      "description": "Right after the full moon, I set my telescope out in my backyard.  I turned off the tracking and let the Moon drift in and out of the field of view ",
       "duration": "1:00",
       "tags": [
         "Time-lapse",
