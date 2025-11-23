@@ -41,16 +41,16 @@
   ],
   "videos": [
     {
-      "poster": "/assets/videos/poster/milkyway-timelapse.jpg",
-      "src": "/assets/videos/clips/milkyway-timelapse.mp4",
-      "title": "Milky Way Rising",
-      "description": "Time-lapse of the galactic core rising over dark skies",
-      "duration": "1:45",
+      "poster": "/assets/videos/poster/constellations 11-15-2025.png",
+      "src": "/assets/videos/clips/constellations 11-15-2025.mp4",
+      "title": "Constellations 11-15-2025",
+      "description": "Time-lapse of some winter constellations",
+      "duration": "1:00",
       "tags": [
         "Time-lapse",
         "Milky Way"
       ],
-      "date": "2024-08-15"
+      "date": "2025-11-15"
     }
   ]
 }

@@ -25,5 +25,5 @@ src/assets/videos/clips/*.mp4
 src/assets/videos/clips/*.mov
 
 # Keep thumbs and posters (under 100KB each, safe for git)
-!src/assets/images/thumbs/
-!src/assets/videos/poster/
+src/assets/images/thumbs/
+src/assets/videos/poster/
