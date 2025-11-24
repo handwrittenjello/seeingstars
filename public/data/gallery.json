@@ -17,7 +17,7 @@
       "thumb": "/assets/images/thumbs/Moon 10-25-2025.jpg",
       "full": "/assets/images/full/Moon 10-25-2025.jpg",
       "title": "Moon 10 25 2025",
-      "subtitle": "Waxing Cresent Moon",
+      "subtitle": "Waxing Crescent Moon",
       "tags": [
         "Lunar"
       ],
@@ -42,7 +42,7 @@
   "thumb": "/assets/images/thumbs/California 2-12-2025.jpg",
   "full": "/assets/images/full/California 2-12-2025.jpg",
   "title": "The California Nebula",
-  "subtitle": "[ADD DESCRIPTION]",
+  "subtitle": "An Emission nebula located in the constellation of Perseus",
   "tags": ["[ADD TAGS]"],
   "date": "[YYYY-MM-DD]",
   "exposure": "[UPDATE: e.g., 150 x 180s Ha/OIII]",
@@ -52,7 +52,7 @@
   "thumb": "/assets/images/thumbs/IC 434 2-8-2025.jpg",
   "full": "/assets/images/full/IC 434 2-8-2025.jpg",
   "title": "The Horsehead Nebula",
-  "subtitle": "[ADD DESCRIPTION]",
+  "subtitle": "A Dark Nebula located in the constellation of Orion",
   "tags": ["[ADD TAGS]"],
   "date": "[YYYY-MM-DD]",
   "exposure": "[UPDATE: e.g., 150 x 180s Ha/OIII]",
@@ -62,7 +62,7 @@
   "thumb": "/assets/images/thumbs/M45 11-26-2024.jpg",
   "full": "/assets/images/full/M45 11-26-2024.jpg",
   "title": "The Pleiades",
-  "subtitle": "[ADD DESCRIPTION]",
+  "subtitle": "A reflection Nebula located in the constellation of Virgo.  Also known as the Seven Sisters",
   "tags": ["[ADD TAGS]"],
   "date": "[YYYY-MM-DD]",
   "exposure": "[UPDATE: e.g., 150 x 180s Ha/OIII]",
@@ -72,7 +72,7 @@
   "thumb": "/assets/images/thumbs/Saturn_8-21-2023.jpg",
   "full": "/assets/images/full/Saturn_8-21-2023.jpg",
   "title": "Saturn",
-  "subtitle": "[ADD DESCRIPTION]",
+  "subtitle": "The 6th Planet in our Solar System",
   "tags": ["[ADD TAGS]"],
   "date": "[YYYY-MM-DD]",
   "exposure": "[UPDATE: e.g., 150 x 180s Ha/OIII]",
@@ -109,6 +109,42 @@
       "src": "/assets/videos/clips/Moon 10-8-2025.mp4",
       "title": "Moon 11-15-2025",
       "description": "Right after the full moon, I set my telescope out in my backyard.  I turned off the tracking and let the Moon drift in and out of the field of view ",
+      "duration": "1:00",
+      "tags": [
+        "Time-lapse",
+        "Milky Way"
+      ],
+      "date": "2025-11-15"
+    },
+      {
+      "poster": "/assets/videos/poster/M8 lagoon Nebula 9-28-2025.png",
+      "src": "/assets/videos/clips/M8 lagoon Nebula 9-28-2025.mp4",
+      "title": "Messier Object 8",
+      "description": "The Lagoon Nebula is being illuminated by new born stars burning brightly in the center which are stripping off electrons from the Hydrogen gas surrounding the region",
+      "duration": "1:00",
+      "tags": [
+        "Time-lapse",
+        "Milky Way"
+      ],
+      "date": "2025-11-15"
+    },
+      {
+      "poster": "/assets/videos/poster/canYouHearTheMeridianFlip.png",
+      "src": "/assets/videos/clips/canYouHearTheMeridianFlip.mp4",
+      "title": "Time Lapse 9-5-2025",
+      "description": "I really struggled with Meridian Flips in the fall.  There is a bug in the mount's software when calculating Local Sidereal Time and it really borks out worse before Daylight Savings Time",
+      "duration": "1:00",
+      "tags": [
+        "Time-lapse",
+        "Milky Way"
+      ],
+      "date": "2025-11-15"
+    },
+      {
+      "poster": "/assets/videos/poster/lunarEclipse.png",
+      "src": "/assets/videos/clips/lunarEclipse.mp4",
+      "title": "Lunar Eclipse",
+      "description": "I shot this during the lunar eclipse in March.  I probably looked insane with 3 cameras aimed at the Moon in my driveway",
       "duration": "1:00",
       "tags": [
         "Time-lapse",

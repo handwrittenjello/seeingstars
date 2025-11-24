@@ -16,6 +16,7 @@
   
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="shortcut icon" href="/favicon.ico">
 </head>
 <body>
   <!-- Navigation -->
@@ -24,7 +25,7 @@
       <a href="/" class="logo">SEEING STARS</a>
       <ul class="nav-links">
         <li><a href="/" class="active">Home</a></li>
-        <li><a href="/gallery.html">Gallery</a></li>
+        <li><a href="/gallery.html">Photos</a></li>
         <li><a href="/videos.html">Videos</a></li>
       </ul>
     </div>
@@ -33,67 +34,55 @@
   <!-- Hero Section -->
   <header class="hero">
     <div class="hero-content">
-      <h1>Capturing the Cosmos</h1>
+      <h1>Drew Littlejohn</h1>
       <p>
-        High-resolution astrophotography revealing the intricate beauty of nebulae, 
-        galaxies, and celestial objects from dark sky locations.
+        Welcome to my collection of astrophotography and videos
       </p>
       <div class="btn-group">
         <a href="/gallery.html" class="btn">
-          <span>View Gallery</span>
-          <span>→</span>
+          <span>View Photos</span>
+          <span>&rarr;</span>
         </a>
-        <a href="/videos.html" class="btn btn-secondary">
+        <a href="/videos.html" class="btn">
           <span>Watch Videos</span>
-          <span>▶</span>
+          <span>&rarr;</span>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Featured Section -->
+  <!-- About Me Section -->
   <section>
     <div class="container">
       <div class="section-header">
-        <h2>Featured Work</h2>
-        <p>A selection of recent captures from remote dark sky sites</p>
+        <h2>About Me</h2>
+        <p>A little bit about myself and what makes me tick(tock)</p>
       </div>
-      
-      <div class="grid grid-3" id="featured-grid">
-        <!-- Cards will be populated by JavaScript -->
-        <div class="loading">
-          <div class="spinner"></div>
-          <p>Loading images...</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section style="background: var(--bg-nebula);">
-    <div class="container">
-      <div class="section-header">
-        <h2>About the Process</h2>
-        <p>Astrophotography combines art, science, and patience</p>
-      </div>
-      
-      <div class="grid grid-2" style="gap: 3rem; max-width: 1000px; margin: 0 auto;">
+      <div class="grid grid-2" style="gap: 2.5rem; align-items: center;">
         <div>
-          <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">Equipment</h3>
+          <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">Astrophotographer</h3>
+          <p style="color: var(--text-dim); line-height: 1.8; margin-bottom: 1.25rem;">
+            I first started my astrophotography journey by pointing a simple iPhone to the sky and seeing
+            what my camera would show me.  I found it very disappointing and looked up, "How can I take better 
+            pictures of space?"  I certainly didn't know how deep the rabbit hole would go.
+          </p>
           <p style="color: var(--text-dim); line-height: 1.8;">
-            Each image is captured using specialized telescopes, cooled astronomy cameras, 
-            and narrowband filters to reveal details invisible to the naked eye. 
-            Long exposures ranging from minutes to hours are combined to create the final images.
+            I found that I would send my friend pictures and asked a simple question: "Do you ever zoom in?"
+            The reply was an astonishing, "No".  So I decided I would start making videos and animations to show
+            the parts that I wanted to focus on.  I love music and movie scores, so I would add in songs that I really
+            enjoyed, but after a few copyright strikes I was in despair.  My friend Dan said to me, "Why don't you just 
+            make the music yourself? You can do that."  Ever since then I've been making the music to my videos as well.
+            I love songs from the 90s
           </p>
         </div>
-        
-        <div>
-          <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">Processing</h3>
-          <p style="color: var(--text-dim); line-height: 1.8;">
-            Raw data undergoes careful calibration, stacking, and enhancement to bring out 
-            the natural colors and structures of deep space objects while maintaining 
-            scientific accuracy and artistic vision.
-          </p>
+        <div class="card" style="padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border-subtle);">
+          <h3 class="card-title" style="margin-bottom: 1rem;">Things I would like you to know about me</h3>
+          <ul style="list-style: none; color: var(--text-dim); line-height: 1.8; padding-left: 0;">
+            <li>&bull; I had to wire my telescope by hand because I couldn't live with plugging in 5 sockets</li>
+            <li>&bull; I didn't learn everything at once, I just encountered a problem and started looking for a solution</li>
+            <li>&bull; Most images take a few weeks to gather all the data</li>
+            <li>&bull; I made this website because my Dad doesn't have an iPhone</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -106,8 +95,7 @@
         <div class="footer-section">
           <h3>Seeing Stars</h3>
           <p>
-            Exploring the universe one photon at a time. 
-            All images captured from dark sky preserves.
+            Once you know the way broadly, you will see it in all things
           </p>
         </div>
         
@@ -122,87 +110,16 @@
         <div class="footer-section">
           <h3>Connect</h3>
           <ul>
-            <li><a href="mailto:hello@seeingstars.space">Email</a></li>
-            <li><a href="https://instagram.com/seeingstars" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="mailto:admin@seeingstars.space">Email</a></li>
+            <li><a href="https://instagram.com/handwrittenjello" target="_blank" rel="noopener">Instagram</a></li>
           </ul>
         </div>
       </div>
       
       <div class="footer-bottom">
-        <p>&copy; 2025 Seeing Stars. All images and content are protected by copyright.</p>
+        <p>&copy; 2025 Seeing Stars LLC. All images and content are protected by copyright.</p>
       </div>
     </div>
   </footer>
-
-  <!-- Scripts -->
-  <script type="module">
-    // Load featured images from JSON
-    async function loadFeatured() {
-      const grid = document.getElementById('featured-grid');
-      
-      try {
-        console.log('🔍 Fetching gallery data...');
-        
-        const response = await fetch('/data/gallery.json');
-        console.log('📡 Response status:', response.status);
-        
-        if (!response.ok) {
-          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-        }
-        
-        const data = await response.json();
-        console.log('✅ Data loaded:', data);
-        console.log('📊 Images found:', data.images?.length || 0);
-        
-        // Safety check
-        if (!data.images || data.images.length === 0) {
-          grid.innerHTML = `
-            <div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--text-dim);">
-              <p>No images found in gallery.json</p>
-              <p style="margin-top: 1rem; font-size: 0.9rem;">
-                Run: <code>npm run sync</code> to generate gallery data
-              </p>
-            </div>
-          `;
-          return;
-        }
-        
-        const featuredImages = data.images.slice(0, 3);
-        
-        grid.innerHTML = featuredImages.map(img => `
-          <div class="card" onclick="window.location.href='/gallery.html'">
-            <div class="card-image">
-              <img src="${img.thumb}" alt="${img.title}" loading="lazy" 
-                   onerror="this.src='https://via.placeholder.com/300x300/1a1a28/9296a8?text=Image+Not+Found'">
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">${img.title}</h3>
-              <p style="color: var(--text-dim); font-size: 0.95rem; margin-bottom: 0.5rem;">
-                ${img.subtitle}
-              </p>
-            </div>
-          </div>
-        `).join('');
-        
-        console.log('✅ Featured images rendered');
-        
-      } catch (error) {
-        console.error('❌ Failed to load featured images:', error);
-        grid.innerHTML = `
-          <div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--text-dim);">
-            <p style="color: #ff6b6b;">⚠️ Failed to load gallery</p>
-            <p style="margin-top: 1rem; font-size: 0.9rem;">
-              Error: ${error.message}
-            </p>
-            <p style="margin-top: 1rem; font-size: 0.85rem;">
-              Check the browser console (F12) for details
-            </p>
-          </div>
-        `;
-      }
-    }
-    
-    loadFeatured();
-  </script>
 </body>
 </html>
