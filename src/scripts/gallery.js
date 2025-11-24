@@ -23,7 +23,7 @@ async function loadGallery() {
     console.error('Failed to load gallery:', error);
     grid.innerHTML = `
       <div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--text-dim);">
-        <p>⚠️ Failed to load gallery data</p>
+        <p>?s??,? Failed to load gallery data</p>
         <p style="margin-top: 1rem; font-size: 0.9rem;">
           Error: ${error.message}
         </p>

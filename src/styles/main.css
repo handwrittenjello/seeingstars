@@ -6,14 +6,14 @@
 
 :root {
   /* Dark space palette */
-  --bg-deepspace: #0a0a0f;
-  --bg-nebula: #12121a;
-  --bg-card: #1a1a28;
+  --bg-deepspace: #040507;
+  --bg-nebula: #0c0f16;
+  --bg-card: #121423;
   --text-star: #e8e9f0;
   --text-dim: #9296a8;
-  --accent-blue: #4a7fdb;
-  --accent-purple: #8b5cf6;
-  --accent-cyan: #06b6d4;
+  --accent-blue: #f59e0b;   /* repurposed as orange from logo */
+  --accent-purple: #6b21a8; /* logo purple */
+  --accent-cyan: #facc15;   /* repurposed as soft yellow for highlights */
   --border-subtle: rgba(138, 143, 168, 0.15);
   
   /* Spacing */
@@ -78,6 +78,9 @@ a:hover {
 }
 
 .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
   font-size: 1.5rem;
   font-weight: 400;
   color: var(--text-star);
@@ -86,6 +89,12 @@ a:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.logo-mark {
+  height: 32px;
+  width: auto;
+  display: block;
 }
 
 .nav-links {
