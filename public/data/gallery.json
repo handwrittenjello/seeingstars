@@ -1,5 +1,18 @@
 {
   "images": [
+      {
+      "thumb": "/assets/images/thumbs/M 42 2-9-2025.jpg",
+      "full": "/assets/images/full/M 42 2-9-2025.jpg",
+      "title": "M42",
+      "subtitle": "The Orion Nebula",
+      "tags": [
+        "Messier",
+        "Galaxy"
+      ],
+      "date": "2025-11-22",
+      "exposure": "[UPDATE: e.g., 150 x 180s Ha/OIII]",
+      "equipment": "[UPDATE: Telescope + Camera]"
+    },
     {
       "thumb": "/assets/images/thumbs/M31.jpg",
       "full": "/assets/images/full/M31.jpg",
@@ -80,6 +93,18 @@
 }
   ],
   "videos": [
+        {
+      "poster": "/assets/videos/poster/constellations 11-25-2025.png",
+      "src": "/assets/videos/clips/constellations 11-25-2025.mp4",
+      "title": "Constellations 11-25-2025",
+      "description": "Time lapse of winter constellations.  Orion is my favorite.  Song is \"Guilty\" by Al Bowlly",
+      "duration": "1:00",
+      "tags": [
+        "Time-lapse",
+        "Milky Way"
+      ],
+      "date": "2025-11-15"
+    },
       {
       "poster": "/assets/videos/poster/veilForaxx-Crop.png",
       "src": "/assets/videos/clips/veilForaxx-Crop.mp4",
