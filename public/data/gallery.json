@@ -1,6 +1,19 @@
 {
   "images": [
       {
+      "thumb": "/assets/images/thumbs/Moon 11-27-2025.jpg",
+      "full": "/assets/images/full/Moon 11-27-2025.jpg",
+      "title": "Moon 11-27-2025",
+      "subtitle": "Moon during the 1st Quarter",
+      "tags": [
+        "Messier",
+        "Galaxy"
+      ],
+      "date": "2025-11-22",
+      "exposure": "[UPDATE: e.g., 150 x 180s Ha/OIII]",
+      "equipment": "[UPDATE: Telescope + Camera]"
+    },
+      {
       "thumb": "/assets/images/thumbs/M 42 2-9-2025.jpg",
       "full": "/assets/images/full/M 42 2-9-2025.jpg",
       "title": "M42",
@@ -93,6 +106,18 @@
 }
   ],
   "videos": [
+      {
+      "poster": "/assets/videos/poster/M45.png",
+      "src": "/assets/videos/clips/M45.mp4",
+      "title": "Messier Object 45",
+      "description": "The Pleiades are a collection of stars that reside about 444 light years from Earth. They are hot new stars that glow an ethereal blue hue. The Taurus Molecular Cloud is drifting between us and these hot stars causing the light to reflect off of the dust in the cloud",
+      "duration": "1:00",
+      "tags": [
+        "Time-lapse",
+        "Milky Way"
+      ],
+      "date": "2025-11-15"
+    },
         {
       "poster": "/assets/videos/poster/constellations 11-25-2025.png",
       "src": "/assets/videos/clips/constellations 11-25-2025.mp4",
