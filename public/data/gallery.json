@@ -106,6 +106,18 @@
 }
   ],
   "videos": [
+    {
+      "poster": "/assets/videos/poster/Moon Story 01-31-2026.png",
+      "src": "/assets/videos/clips/Moon Story 01-31-2026.mp4",
+      "title": "Moon Time Lapse 01-31-2026",
+      "description": "I love this song becuase it's so silly, but deep.",
+      "duration": "1:00",
+      "tags": [
+        "Time-lapse",
+        "Milky Way"
+      ],
+      "date": "2026-01-31"
+    },
       {
       "poster": "/assets/videos/poster/M45.png",
       "src": "/assets/videos/clips/M45.mp4",
