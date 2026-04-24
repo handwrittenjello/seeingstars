@@ -88,7 +88,7 @@
   "thumb": "/assets/images/thumbs/M45 11-26-2024.jpg",
   "full": "/assets/images/full/M45 11-26-2024.jpg",
   "title": "The Pleiades",
-  "subtitle": "A reflection Nebula located in the constellation of Virgo.  Also known as the Seven Sisters",
+  "subtitle": "A Reflection Nebula located in the constellation of Taurus.  Also known as the Seven Sisters",
   "tags": ["[ADD TAGS]"],
   "date": "[YYYY-MM-DD]",
   "exposure": "[UPDATE: e.g., 150 x 180s Ha/OIII]",
@@ -106,11 +106,23 @@
 }
   ],
   "videos": [
+        {
+      "poster": "/assets/videos/poster/Moon 4-23-2026.png",
+      "src": "/assets/videos/clips/Moon 4-23-2026 subs_1.mp4",
+      "title": "Moon 4-23-2026",
+      "description": "I got to pull out my trusty Moon map and label some craters for you. The 1st Quarter and 3rd Quarter phases of the Moon are my favorites because the Sun hits the edges of these impact craters and shows their contrast and depth.",
+      "duration": "1:00",
+      "tags": [
+        "Time-lapse",
+        "Milky Way"
+      ],
+      "date": "2026-04-23"
+    },
     {
       "poster": "/assets/videos/poster/Moon Story 01-31-2026.png",
       "src": "/assets/videos/clips/Moon Story 01-31-2026.mp4",
       "title": "Moon Time Lapse 01-31-2026",
-      "description": "I love this song becuase it's so silly, but deep.",
+      "description": "I love this song because it's so silly, but deep.",
       "duration": "1:00",
       "tags": [
         "Time-lapse",
@@ -182,7 +194,7 @@
       "poster": "/assets/videos/poster/M8 lagoon Nebula 9-28-2025.png",
       "src": "/assets/videos/clips/M8 lagoon Nebula 9-28-2025.mp4",
       "title": "Messier Object 8",
-      "description": "The Lagoon Nebula is being illuminated by new born stars burning brightly in the center which are stripping off electrons from the Hydrogen gas surrounding the region",
+      "description": "The Lagoon Nebula is being illuminated by newborn stars burning brightly in the center which are stripping off electrons from the Hydrogen gas surrounding the region",
       "duration": "1:00",
       "tags": [
         "Time-lapse",
@@ -194,7 +206,7 @@
       "poster": "/assets/videos/poster/canYouHearTheMeridianFlip.png",
       "src": "/assets/videos/clips/canYouHearTheMeridianFlip.mp4",
       "title": "Time Lapse 9-5-2025",
-      "description": "I really struggled with Meridian Flips in the fall.  There is a bug in the mount's software when calculating Local Sidereal Time and it really borks out worse before Daylight Savings Time",
+      "description": "I really struggled with Meridian Flips in the fall.  There is a bug in the mount's software when calculating Local Sidereal Time and it really borks out worse before Daylight Saving Time",
       "duration": "1:00",
       "tags": [
         "Time-lapse",
