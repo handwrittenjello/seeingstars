@@ -41,11 +41,11 @@ jobs:
         run: aws s3 sync s3://www.seeingstars.space/assets/images/thumbs/ dist/assets/images/thumbs/
 
       - name: Run Playwright tests
-        run: PLAYWRIGHT_JSON_OUTPUT_NAME=ctrf-report.json npx playwright test --reporter=json
+        run: npm run test
         continue-on-error: true
 
       - name: Publish test summary
-        run: npx github-actions-ctrf ctrf-report.json
+        run: npx github-actions-ctrf ctrf/ctrf-report.json
         if: always()
 
       - name: Upload test report
