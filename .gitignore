@@ -17,6 +17,11 @@ Thumbs.db
 .vscode/
 .idea/
 
+# Playwright
+playwright-report/
+test-results/
+dist-tests/
+
 # Large media files (store in S3 or use Git LFS)
 src/assets/images/originals/
 src/assets/images/full/*.jpg

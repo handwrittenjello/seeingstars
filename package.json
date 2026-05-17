@@ -8,10 +8,16 @@
     "preview": "vite preview",
     "optimize": "node scripts/optimize-images.js",
     "generate": "node scripts/generate-gallery-json.js",
-    "sync": "npm run optimize && npm run generate"
+    "sync": "npm run optimize && npm run generate",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:report": "playwright show-report"
   },
   "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^25.8.0",
     "sharp": "^0.33.0",
+    "typescript": "^5.0.0",
     "vite": "^5.0.0"
   }
 }
