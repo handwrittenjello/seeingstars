@@ -10,15 +10,11 @@ export class HomePage extends BasePage {
         this.map = new HomePageMap(page);
     }
 
-    async goto() {
-        await this.page.goto(this.baseURL);
+    async goto(): Promise<void> {
+        await this.navigate('/');
     }
 
-    async clickNavPhotos() {
+    async clickPhotos(): Promise<void> {
         await this.map.photosLink.click();
-    }
-
-    async clickHeroPhotos() {
-        await this.map.heroPhotosButton.click();
     }
 }
