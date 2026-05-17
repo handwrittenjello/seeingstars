@@ -25,13 +25,16 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    /* Base URL to use in actions like `await page.goto('')`. */
-    // baseURL: 'http://localhost:3000',
-
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
+    baseURL: process.env.CI ? 'http://localhost:4173' : 'https://www.seeingstars.space',
     trace: 'on-first-retry',
     headless: true,
   },
+
+  webServer: process.env.CI ? {
+    command: 'npx vite preview',
+    url: 'http://localhost:4173',
+    reuseExistingServer: false,
+  } : undefined,
 
   /* Configure projects for major browsers */
   projects: [

@@ -1,8 +1,6 @@
 name: Playwright Tests
 
 on:
-  push:
-    branches: [master, testingFramework]
   pull_request:
     branches: [master]
   workflow_dispatch:
@@ -26,6 +24,19 @@ jobs:
 
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium
+
+      - name: Build site
+        run: npm run build
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - name: Sync thumbnail images from S3
+        run: aws s3 sync s3://www.seeingstars.space/assets/images/thumbs/ dist/assets/images/thumbs/
 
       - name: Run Playwright tests
         run: npm run test
