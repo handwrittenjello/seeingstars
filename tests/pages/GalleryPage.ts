@@ -10,11 +10,17 @@ export class GalleryPage extends BasePage {
         this.map = new GalleryPageMap(page);
     }
 
-    async goto() {
-        await this.page.goto(`${this.baseURL}/gallery.html`);
+    async goto(): Promise<void> {
+        await this.navigate('/gallery.html');
     }
 
-    async waitForGalleryLoad() {
+    async waitForGalleryLoad(): Promise<void> {
         await this.map.loadingIndicator.waitFor({ state: 'hidden' });
+    }
+
+    async filterByDate(date: string): Promise<void> {
+        await this.map.dateFilter.click();
+        await this.map.dateInput.fill(date);
+        await this.map.applyFilterButton.click();
     }
 }

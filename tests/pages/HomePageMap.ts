@@ -1,21 +1,31 @@
-import { Page } from '@playwright/test';
+// tests/pages/HomePageMap.ts
+import { Page, Locator } from '@playwright/test';
 
 export class HomePageMap {
-    constructor(private page: Page) {}
+    private page: Page;
 
-    get logo() {
+    constructor(page: Page) {
+        this.page = page;
+    }
+
+    get logo(): Locator {
         return this.page.getByAltText('Seeing Stars logo');
     }
 
-    get photosLink() {
-        return this.page.getByRole('link', { name: 'Photos', exact: true });
+    get homeLink(): Locator {
+        return this.page.locator('a:text("Home")');
     }
 
-    get videosLink() {
-        return this.page.getByRole('link', { name: 'Videos', exact: true });
+    get photosLink(): Locator {
+        return this.page.locator('a:text("Photos")');
     }
 
-    get heroPhotosButton() {
+    get videosLink(): Locator {
+        return this.page.locator('a:text("Videos")');
+    }
+
+    get heroPhotosButton(): Locator {
         return this.page.locator('a:text("View Photos")');
     }
 }
+
