@@ -9,23 +9,54 @@ export class HomePageMap {
     }
 
     get logo(): Locator {
-        return this.page.getByAltText('Seeing Stars logo');
+        return this.page.locator('#nav-logo');
     }
 
     get homeLink(): Locator {
-        return this.page.locator('a:text("Home")');
+        return this.page.locator('#nav-link-home');
     }
 
     get photosLink(): Locator {
-        return this.page.locator('a:text("Photos")');
+        return this.page.locator('#nav-link-photos');
     }
 
     get videosLink(): Locator {
-        return this.page.locator('a:text("Videos")');
+        return this.page.locator('#nav-link-videos');
     }
 
     get heroPhotosButton(): Locator {
-        return this.page.locator('a:text("View Photos")');
+        return this.page.locator('#btn-hero-view-photos');
+    }
+
+    get heroVideosButton(): Locator {
+        return this.page.locator('#btn-hero-watch-videos');
+    }
+
+    get hero(): Locator {
+        return this.page.locator('#hero');
+    }
+
+    get aboutSection(): Locator {
+        return this.page.locator('#about-section');
+    }
+
+    get footer(): Locator {
+        return this.page.locator('#footer');
+    }
+
+    get footerGalleryLink(): Locator {
+        return this.page.locator('#footer-link-gallery');
+    }
+
+    get footerVideosLink(): Locator {
+        return this.page.locator('#footer-link-videos');
+    }
+
+    get footerEmailLink(): Locator {
+        return this.page.locator('#footer-link-email');
+    }
+
+    get footerInstagramLink(): Locator {
+        return this.page.locator('#footer-link-instagram');
     }
 }
-
