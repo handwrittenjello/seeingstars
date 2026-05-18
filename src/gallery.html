@@ -14,24 +14,24 @@
 </head>
 <body>
   <!-- Navigation -->
-  <nav class="nav">
+  <nav class="nav" id="main-nav">
     <div class="container">
-      <a href="/" class="logo">
+      <a href="/" class="logo" id="nav-logo">
         <img src="/logo.png" alt="Seeing Stars logo" class="logo-mark">
         <span>SEEING STARS</span>
       </a>
-      <ul class="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/gallery.html" class="active">Photos</a></li>
-        <li><a href="/videos.html">Videos</a></li>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/" id="nav-link-home">Home</a></li>
+        <li><a href="/gallery.html" class="active" id="nav-link-photos">Photos</a></li>
+        <li><a href="/videos.html" id="nav-link-videos">Videos</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- Page Header -->
-  <section style="padding: 4rem 0 2rem;">
+  <section id="gallery-header-section" style="padding: 4rem 0 2rem;">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header" id="gallery-header">
         <h1>Complete Gallery</h1>
         <p>Click any image to view full resolution details</p>
       </div>
@@ -39,10 +39,10 @@
   </section>
 
   <!-- Gallery Grid -->
-  <section>
+  <section id="gallery-section">
     <div class="container">
       <div class="grid grid-3" id="gallery-grid">
-        <div class="loading">
+        <div class="loading" id="gallery-loading">
           <div class="spinner"></div>
           <p>Loading gallery...</p>
         </div>
@@ -52,10 +52,10 @@
 
   <!-- Lightbox -->
   <div class="lightbox" id="lightbox">
-    <div class="lightbox-close" onclick="closeLightbox()" title="Close (Esc)">
+    <div class="lightbox-close" id="lightbox-close" onclick="closeLightbox()" title="Close (Esc)">
       &times;
     </div>
-    <div class="lightbox-content">
+    <div class="lightbox-content" id="lightbox-content">
       <img id="lightbox-img" src="" alt="">
     </div>
     <div class="lightbox-info" id="lightbox-info">
@@ -65,31 +65,31 @@
   </div>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer" id="footer">
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
+      <div class="footer-content" id="footer-content">
+        <div class="footer-section" id="footer-section-brand">
           <h3>Seeing Stars</h3>
           <p>
             Once you know the way broadly, you will see it in all things
           </p>
         </div>
-        <div class="footer-section">
+        <div class="footer-section" id="footer-section-links">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="/gallery.html">Full Gallery</a></li>
-            <li><a href="/videos.html">Video Showcase</a></li>
+            <li><a href="/gallery.html" id="footer-link-gallery">Full Gallery</a></li>
+            <li><a href="/videos.html" id="footer-link-videos">Video Showcase</a></li>
           </ul>
         </div>
-        <div class="footer-section">
+        <div class="footer-section" id="footer-section-connect">
           <h3>Connect</h3>
           <ul>
-            <li><a href="mailto:admin@seeingstars.space">Email</a></li>
-            <li><a href="https://instagram.com/handwrittenjello" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="mailto:admin@seeingstars.space" id="footer-link-email">Email</a></li>
+            <li><a href="https://instagram.com/handwrittenjello" target="_blank" rel="noopener" id="footer-link-instagram">Instagram</a></li>
           </ul>
         </div>
       </div>
-      <div class="footer-bottom">
+      <div class="footer-bottom" id="footer-bottom">
         <p>&copy; 2025 Seeing Stars LLC. All images and content are provided to you for free and are not copyright protected. Looking up is free and should be available to all. Enjoy!</p>
       </div>
     </div>
@@ -99,7 +99,3 @@
   <script type="module" src="/scripts/gallery.js"></script>
 </body>
 </html>
-
-
-
-
