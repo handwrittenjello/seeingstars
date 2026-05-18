@@ -21,6 +21,7 @@ Thumbs.db
 playwright-report/
 test-results/
 dist-tests/
+ctrf/
 
 # Large media files (store in S3 or use Git LFS)
 src/assets/images/originals/
