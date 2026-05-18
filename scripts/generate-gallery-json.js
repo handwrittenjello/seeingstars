@@ -45,25 +45,6 @@ function guessObjectName(filename) {
     .join(' ');
 }
 
-// Guess tags based on filename or object type
-function guessTags(filename) {
-  const name = filename.toLowerCase();
-  const tags = [];
-  
-  if (name.match(/m\d+|messier/)) tags.push('Messier');
-  if (name.match(/ngc/)) tags.push('NGC');
-  if (name.match(/ic\d+/)) tags.push('IC');
-  if (name.match(/nebula|ngc|ic/)) tags.push('Nebula');
-  if (name.match(/galaxy|m31|m51|m81|m82|m101/)) tags.push('Galaxy');
-  if (name.match(/cluster|pleiades|m45/)) tags.push('Cluster');
-  if (name.match(/milky|milkyway/)) tags.push('Milky Way');
-  
-  // Default tag if none found
-  if (tags.length === 0) tags.push('Deep Sky');
-  
-  return tags;
-}
-
 // Main function
 function generateGalleryJson() {
   console.log('🔍 Scanning for images...\n');
@@ -135,19 +116,14 @@ function generateGalleryJson() {
     } else {
       // Create new entry with smart placeholders
       const objectName = guessObjectName(thumbFile);
-      const tags = guessTags(thumbFile);
-      
+
       const newEntry = {
         thumb: `/assets/images/thumbs/${thumbFile}`,
         full: `/assets/images/full/${fullFile}`,
         title: objectName,
-        subtitle: `[UPDATE: Add catalog number & distance]`,
-        tags: tags,
-        date: new Date().toISOString().split('T')[0],
-        exposure: '[UPDATE: e.g., 150 x 180s Ha/OIII]',
-        equipment: '[UPDATE: Telescope + Camera]'
+        subtitle: `[UPDATE: Add catalog number & distance]`
       };
-      
+
       newImages.push(newEntry);
       updatedCount.new++;
       console.log(`+ Added new: ${objectName} → ${thumbFile}`);
@@ -174,7 +150,7 @@ function generateGalleryJson() {
   console.log(`   - Videos: ${existingVideos.length}`);
   console.log('\n📝 Next steps:');
   console.log(`   1. Open: ${jsonPath}`);
-  console.log(`   2. Search for "[UPDATE:" and fill in details`);
+  console.log(`   2. Search for "[UPDATE:" and fill in the subtitle`);
   console.log(`   3. Run: npm run dev (to preview changes)\n`);
 }
 
