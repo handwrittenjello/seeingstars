@@ -15,14 +15,19 @@ test.describe('Seeing Stars - Homepage', () => {
     });
 
     test('navigation links are present', async ({ navBar }) => {
-        await expect(navBar.homeLink).toBeVisible();
-        await expect(navBar.photosLink).toBeVisible();
-        await expect(navBar.videosLink).toBeVisible();
+        await expect(navBar.map.homeLink).toBeVisible();
+        await expect(navBar.map.photosLink).toBeVisible();
+        await expect(navBar.map.videosLink).toBeVisible();
     });
 
     test('hero buttons navigate correctly', async ({ homePage, page }) => {
         await homePage.clickPhotos();
         await expect(page).toHaveURL(/gallery\.html/);
     });
+
+    test('video gallery is present', async ({ homePage, page }) => {
+        await homePage.clickVideos();
+        await expect(page).toHaveURL(/videos\.html/);
+    })
 
 });

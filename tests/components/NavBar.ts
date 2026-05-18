@@ -1,22 +1,28 @@
 import { Page } from '@playwright/test';
+import { NavBarMap } from './NavBarMap';
 
 export class NavBar {
     readonly page: Page;
+    readonly map: NavBarMap;
 
     constructor(page: Page) {
         this.page = page;
+        this.map = new NavBarMap(page);
     }
 
-    get homeLink() {
-        return this.page.locator('a:text("Home")');
+    async clickLogo(): Promise<void> {
+        await this.map.logo.click();
     }
 
-    get photosLink() {
-        return this.page.locator('a:text("Photos")');
+    async clickHome(): Promise<void> {
+        await this.map.homeLink.click();
     }
 
-    get videosLink() {
-        return this.page.locator('a:text("Videos")');
+    async clickPhotos(): Promise<void> {
+        await this.map.photosLink.click();
+    }
+
+    async clickVideos(): Promise<void> {
+        await this.map.videosLink.click();
     }
 }
-

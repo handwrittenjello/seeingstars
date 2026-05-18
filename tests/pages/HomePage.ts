@@ -17,4 +17,8 @@ export class HomePage extends BasePage {
     async clickPhotos(): Promise<void> {
         await this.map.photosLink.click();
     }
+
+    async clickVideos(): Promise<void> {
+        await this.map.videosLink.click();
+    }
 }
