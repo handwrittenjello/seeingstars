@@ -24,17 +24,6 @@ export class GalleryPageMap {
         return this.page.locator('img[src*="/assets/images/thumbs/"]');
     }
 
-    get dateFilter(): Locator {
-        return this.page.locator('#date-filter');
-    }
-
-    get dateInput(): Locator {
-        return this.page.locator('#date-input');
-    }
-
-    get applyFilterButton(): Locator {
-        return this.page.locator('button:text("Apply")');
-    }
 
     get galleryGrid(): Locator {
         return this.page.locator('#gallery-grid');
