@@ -40,6 +40,9 @@ jobs:
       - name: Sync thumbnail images from S3
         run: aws s3 sync s3://www.seeingstars.space/assets/images/thumbs/ dist/assets/images/thumbs/
 
+      - name: Sync video poster thumbnails from S3
+        run: aws s3 sync s3://www.seeingstars.space/assets/videos/poster/ dist/assets/videos/poster/
+
       - name: Run Playwright tests
         run: npm run test
         continue-on-error: true
